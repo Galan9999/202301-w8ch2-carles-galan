@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist",
+    "start:dev": "node --watch dist",
+    "build": "npx tsc",
+    "build:dev": "npx tsc -w",
+    "test": "npx jest --passWithNoTests",
+    "test:coverage": "npx jest --coverage --watchAll=false --passWithNoTests",
     "prepare": "husky install"
   },
   "keywords": [],
